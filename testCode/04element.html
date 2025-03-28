@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box">box</div>
+  <script>
+    let box = document.getElementById('box');
+    box.myColor = '#fff'; // 自定义属性无效
+    box.className = 'box'
+    box.setAttribute('myBox', 'box')
+    console.log(box.getAttribute('myColor'));
+    console.log(box.getAttribute('class'));
+    console.log(box.getAttribute('myBox'));
+    box.removeAttribute('myBox')
+    console.log(box.getAttribute('myBox'));
+  </script>
+</body>
+</html>

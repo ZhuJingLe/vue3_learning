@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box">box</div>
+  <img src="./image.png" alt="" name="img">
+  <img src="./image.png" alt="" name="img">
+  <img src="./image.png" alt="" name="img2">
+  <img src="./image.png" alt="" name="img3">
+  <img src="./image.png" alt="" name="img4">
+  <a href="./image.png" name="link">link</a>
+  <a href="./image.png">link2</a>
+  <a>link3</a>
+  <script>
+    let box = document.getElementById('box')
+    console.log(box);
+    let images = document.getElementsByTagName('img');
+    console.log(images);
+    console.log(images[0]);
+    console.log(images.item(1));
+    console.log(images.namedItem('img3'));
+    let img = document.getElementsByName('img');
+    console.log(img);
+    let allEle = document.getElementsByTagName('*')
+    console.log(allEle);
+    // has name attr a element 
+    console.log(document.anchors);
+    // has href attr a's element
+    console.log(document.links);
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box" onclick="myFun()" custom_attr="zhujingle" style="color: red;" class="box boxDiv" lang="en" dir="ltr" title="box">box</div>
+  <script>
+    function myFun() {
+      console.log('myFun...');
+    }
+    let box = document.getElementById('box');
+    console.log(box.tagName); // DIV
+    console.log(box.nodeName); // DIV
+    console.dir(box)
+    console.log(box.title);
+    console.log(box.className);
+    
+    setTimeout(() => {
+      box.title = 'change box title'
+    }, 10000);
+
+    console.log(box.style);
+    console.log(box.getAttribute('style')); // String 类型
+
+    console.log(box.custom_attr);
+    console.log(box.getAttribute('custom_attr'));
+
+    console.log(box.onclick);
+    console.log(box.getAttribute('onclick'));
+
+  </script>
+</body>
+</html>
