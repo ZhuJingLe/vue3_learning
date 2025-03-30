@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let element = document.createElement('div');
+    element.className = 'divBox'
+    let textNode = document.createTextNode('<strong>hello world!</strong>!!');
+    let textNode2 = document.createTextNode('message')
+    element.appendChild(textNode);
+    element.appendChild(textNode2);
+    document.body.appendChild(element);
+
+    // 合并text
+    console.log(element.childNodes.length);
+    element.normalize();
+    console.log(element.childNodes.length);
+    // 拆分 text
+
+    let element2 = document.createElement('div');
+    element2.className = 'element2';
+
+    let textNode3 = document.createTextNode('hello world');
+    element2.appendChild(textNode3);
+    document.body.appendChild(element2);
+    let newNode = element2.firstChild.splitText(5);
+    console.log(element2.firstChild.nodeValue); // hello
+    console.log(newNode.nodeValue); // world
+    console.log(element2.childNodes.length); // 2
+  </script>
+</body>
+</html>

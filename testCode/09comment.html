@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box"><!-- A comment -->A</div>
+  <div>
+    <![CDATA[This is some content.]]>
+  </div>
+  <script>
+    let box = document.getElementById('box');
+    console.log(box.firstChild.data);
+    let comment = document.createComment('这是一段注释');
+    box.appendChild(comment);
+  </script>
+</body>
+</html>
